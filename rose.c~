@@ -1,0 +1,29 @@
+/*************************************************************************
+	> File Name: rose.c
+	> Author: zty
+	> Mail: 1295303752@qq.com
+	> Created Time: Tue 01 May 2018 11:45:59 AM CST
+ ************************************************************************/
+
+#include<stdio.h>
+int flower(int n)
+{
+    int i, j, k;
+    i = n % 10;
+    j = n / 10 % 10;
+    k = n / 100;
+    if((i*i*i + j*j*j + k*k*k) == n)
+        return 1;
+    else
+        return 0;
+}
+int main()
+{
+    int i;
+    for (i = 100; i < 1000; i++)
+    {
+        if (flower(i) == 1)
+        printf("%d ", i);
+    }
+    return 0;
+}
